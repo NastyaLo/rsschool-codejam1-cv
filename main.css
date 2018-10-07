@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+header,
+main {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.header__cover,
+.main__cover {
+    width: 100%;
+    max-width: 1024px;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(140, 140, 140, 1);
+}
+
+.header__cover {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 20px;
+}
+
+.header__cover div {
+    margin-right: 20px;
+}
+
+.header__cover div:last-child {
+    margin-right: 0;
+}
+
+.header__cover div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: light;
+    src: url("fonts/RobotoLight.ttf");
+}
