@@ -5,23 +5,24 @@
         <title>Curriculum Vitae</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/png">
         <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width" />
     </head>
     <body>
         <header>
             <div class="header__cover">
-                <div class="header__personal-info">
+                <a class="header__personal-info" href="#main">
                     Personal info
-                </div>
-                <div class="header__cv">
+                </a>
+                <a class="header__cv" href="#cv">
                     Сurriculum vitae
-                </div>
-                <div class="header__contacts">
+                </a>
+                <a class="header__contacts" href="#contacts">
                     Contacts
-                </div>
+                </a>
             </div>
         </header>
         <main>
-            <div class="main__cover">
+            <div class="main__cover" id="main">
                 <div class="personal-info">
                     <img src="images/htmlBackground.png" class="personal-info__background">
                     <div class="personal-info__text">
@@ -33,7 +34,8 @@
                         <img src="images/myPhoto.jpeg" alt="Настя Лойко">
                     </div>
                 </div>
-                <div class="cv">
+                <div class="cv" id="cv">
+                    <span class="cv__title">Curriculum Vitae</span>
                     <span>I've been interested in web development for a long time.<br>During this time I managed to master some technologies and programs: </span>
                     <br>
                     <div class="cv__technologies-icons">
@@ -57,7 +59,7 @@
                     <br>
                     <span>At the moment I possess a year's work experience. I created the site components (for instance, a calculator) for a journal on crypto-currencies, responsive multi-page sites without using a bootstrap with a lot of animations, sliders, etc., developed a SPA with use of the ReactJS and bootstrap.</span>
                     <br>
-                    <span>Portfolio</span>
+                    <span class="portfolio__title">Portfolio</span>
                     <span class="fs-small">You can click on some example gifs and see its git repository</span>
                     <br>
                     <div class="cv__portfolio">
@@ -75,8 +77,27 @@
                         Vladislav Timma <a href="mailto:elninho93@gmail.com">elninho93@gmail.com</a>.<br><br>
                         Contacts are attached with their permission.</span>
                 </div>
-                <div class="contacts">
-
+                <div class="contacts" id="contacts">
+                    <div class="contacts__title">
+                        Contact with me
+                    </div><br><br>
+                    <div class="contacts__icons">
+                        <div class="contacts__vk">
+                            <a href="https://vk.com/im?sel=214608442"><img src="images/vk.png" alt="Vkontakte"></a>
+                        </div>
+                        <div class="contacts__tg">
+                            <a href="t.me/Nastya_loyko"><img src="images/tg.png" alt="Telegram"></a>
+                        </div>
+                        <div class="contacts__gmail">
+                            <a href="mailto:loyko2802@gmail.com"><img src="images/gmail.png" alt="Gmail"></a>
+                        </div>
+                        <div class="contacts__tutby">
+                            <a href="https://jobs.tut.by/resume/4c6a518eff03f331700039ed1f617a385a3833"><img src="images/tutby.png" alt="Jobs TUT.BY"></a>
+                        </div>
+                        <div class="contacts__phone">
+                            <a href="tel:+375297851847"><img src="images/phone.png" alt="Phone"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
