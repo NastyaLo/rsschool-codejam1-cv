@@ -1,9 +1,15 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
 
     margin: 0;
     padding: 0;
+
+    overflow-x: hidden;
 
     font-family: Roboto;
     font-weight: 300;
@@ -19,6 +25,7 @@ main {
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 .header__cover,
@@ -27,11 +34,30 @@ a {
     max-width: 1024px;
 }
 
+@media (max-width: 768px) {
+    .header__cover,
+    .main__cover {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header__cover,
+    .main__cover {
+        max-width: 320px;
+    }
+}
+
 header {
     position: fixed;
+    z-index: 1;
 
     background-color: white;
     box-shadow: 0px 0px 5px 0px rgba(140, 140, 140, 1);
+}
+
+main a {
+    text-decoration: underline;
 }
 
 .header__cover {
@@ -41,15 +67,35 @@ header {
     padding: 20px;
 }
 
-.header__cover div {
+@media (max-width: 768px) {
+    .header__cover {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .header__cover {
+        padding: 10px 0;
+        font-size: 0.7em;
+    }
+}
+
+.header__cover a {
+    display: block;
     margin-right: 20px;
 }
 
-.header__cover div:last-child {
+@media (max-width: 500px) {
+    .header__cover a {
+        margin-right: 10px;
+    }
+}
+
+.header__cover a:last-child {
     margin-right: 0;
 }
 
-.header__cover div:hover {
+.header__cover a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -67,24 +113,65 @@ header {
 
     width: 100%;
 
-    padding: 50px 0;
-    margin-top: 50px;
     margin-bottom: 25px;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+@media (max-width: 768px) {
+    .personal-info {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    .personal-info {
+        max-width: 320px;
+        flex-direction: column-reverse;
+
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 .personal-info__background {
     position: fixed;
     left: 0;
-    top: auto;
+    top: 0;
     z-index: -1;
 
     width: 100%;
-    max-height: 285px;
+    max-height: 330px;
+}
+
+@media (max-width: 768px) {
+    .personal-info__background {
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .personal-info__background {
+        height: 550px;
+    }
 }
 
 .personal-info__text {
     font-size: 40px;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .personal-info__text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .personal-info__text {
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 .personal-info__img img {
@@ -94,25 +181,49 @@ header {
     border-radius: 2px;
 }
 
+@media (max-width: 768px) {
+    .personal-info__img img {
+        width: 120px;
+    }
+}
+
 .cv {
     display: flex;
     flex-direction: column;
 
     max-width: 800px;
-    padding-top: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
+
+    padding: 25px 30px;
+    padding-top: 75px;
 
     background-color: white;
 
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cv {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cv {
+        max-width: 320px;
+    }
 }
 
 .cv__technologies-icons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 35px;
+}
+
+@media (max-width: 500px) {
+    .cv__technologies-icons {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .cv__technologies-icons__icon {
@@ -134,6 +245,71 @@ header {
 
 .cv__portfolio__item {
     max-width: 100%;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 800px;
+
+    padding: 25px 30px;
+
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contacts {
+        max-width: 320px;
+    }
+}
+
+.cv__title,
+.portfolio__title,
+.contacts__title {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.contacts__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .contacts__icons {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.contacts__icons div {
+    margin-right: 35px;
+}
+
+@media (max-width: 500px) {
+    .contacts__icons div {
+        margin-right: 0;
+    }
+}
+
+.contacts__icons div:last-child {
+    margin-right: 0;
+}
+
+.contacts__icons div img{
+    max-height: 50px;
+    width: auto;
 }
 
 @font-face {
