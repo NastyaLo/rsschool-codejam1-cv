@@ -48,8 +48,48 @@ header {
     cursor: pointer;
 }
 
+.main__cover {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 50px 0;
+}
+
+.personal-info__background {
+    position: absolute;
+    left: 0;
+    top: auto;
+    z-index: -1;
+
+    width: 100%;
+    max-height: 290px;
+}
+
+.personal-info__text {
+    font-size: 40px;
+    color: white;
+}
+
+.personal-info__img img {
+    width: 150px;
+    height: auto;
+    border-radius: 2px;
+}
+
 @font-face {
     font-family: Roboto;
-    font-weight: light;
+    font-weight: 300;
     src: url("fonts/RobotoLight.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: normal;
+    src: url("fonts/RobotoRegular.ttf");
 }
